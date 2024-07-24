@@ -2,16 +2,43 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Integral - ExtraBold';
+    src: url('./public/fonts/Fontspring-DEMO-integralcf-extrabold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Integral - Regular';
+    src: url('./public/fonts/Fontspring-DEMO-integralcf-regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Monument - Regular';
+    src: url('./public/fonts/MonumentExtended-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Monument - UltraBold';
+    src: url('./public/fonts/MonumentExtended-Ultrabold.otf') format('opentype');
+}
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    min-height: 100vh;
 }
 
 .video-bg {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -9;
 }
 
-video {
+.video-bg video {
     min-height: 100%;
     min-width: 100%;
     position: fixed;
@@ -30,8 +57,274 @@ video {
     position: fixed;
     right: 10px;
     bottom: 10px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .link-whats {
+    width: 60px;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.link-whats:hover {
     width: 70px;
+}
+
+header {
+    background-color: #DED8DE;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    img {
+        width: 150px;
+    }
+
+    nav {
+        color: #000;
+        display: flex;
+        gap: 25px;
+
+        a {
+            font-family: 'Monument - UltraBold';
+            position: relative;
+        }
+
+        a:visited {
+            color: #000;
+        }
+
+        a::after {
+            content: '';
+            background-color: #000;
+            position: absolute;
+            height: 2px;
+            left: 0;
+            bottom: 0px;
+            width: 0%;
+            transition: 0.3s;
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 75px;
+
+    h1 {
+        font-family: 'Monument - UltraBold';
+        font-size: 150px;
+        color: #EA4DBF;
+    }
+
+    p {
+        font-family: 'Monument - Regular';
+        font-size: 30px;
+        color: #DED8DE;
+    }
+}
+
+.sobre {
+    width: 100vw;
+    background-color: #DED8DE;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    padding: 0 250px;
+
+    img {
+        height: 45vh;
+    }
+
+    .section-p {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    p {
+        font-family: 'Monument - Regular';
+        font-size: 28px;
+
+        span {
+            font-family: 'Monument - UltraBold';
+        }
+    }
+}
+
+.estilos {
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 250px;
+    gap: 30px;
+
+    h2 {
+        color: #EA4DBF;
+        font-family: 'Monument - UltraBold';
+        font-size: 50px;
+    }
+
+    p {
+        color: #DED8DE;
+        font-family: 'Monument - Regular';
+        text-align: center;
+        font-size: 26px;
+    }
+}
+
+.ballet {
+    width: 100vw;
+
+    img {
+        width: 100vw;
+        box-shadow: 0px 10px 24px 3px rgba(222, 216, 222, 1);
+        z-index: -1;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -125px;
+        text-shadow: 0px 3px 5px #000;
+    }
+
+    .p1 {
+        color: #EA4DBF;
+        font-family: 'Monument - UltraBold';
+        font-size: 20px;
+    }
+
+    .p2 {
+        color: #DED8DE;
+        font-family: 'Monument - Regular';
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .p3 {
+        color: #EA4DBF;
+        font-family: 'Monument - UltraBold';
+        font-size: 20px;
+    }
+}
+
+.contato {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 65px;
+    padding: 100px 0;
+
+    div {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button {
+        border: none;
+        background-color: #EA4DBF;
+        color: #000;
+        font-size: 25px;
+        font-family: 'Monument - Regular';
+        padding: 15px 30px;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        -ms-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+    }
+
+    button:hover {
+        font-size: 30px;
+        color: #DED8DE;
+        box-shadow: 0px 10px 24px 3px rgba(222, 216, 222, 1);
+    }
+
+    iframe {
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+    }
+}
+
+footer {
+    width: 100vw;
+    background-color: #EA4DBF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    gap: 30px;
+
+    .share {
+        display: flex;
+        gap: 5px;
+    }
+
+    a {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    img {
+        transition: .3s ease-in-out;
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        -ms-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+    }
+
+    img:hover {
+        width: 50px;
+        height: 50px;
+    }
+
+    p {
+        font-family: 'Monument - Regular';
+        font-size: 14px;
+    }
 }
