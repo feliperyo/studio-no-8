@@ -129,12 +129,18 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding-bottom: 75px;
+    padding-bottom: 50px;
 
     h1 {
         font-family: 'Monument - UltraBold';
         font-size: 150px;
         color: #EA4DBF;
+    }
+
+    h2 {
+        color: #DED8DE;
+        font-family: 'Monument - UltraBold';
+        font-size: 75px;
     }
 
     p {
@@ -204,7 +210,7 @@ main {
 
     img {
         width: 100vw;
-        box-shadow: 0px 10px 24px 3px rgba(222, 216, 222, 1);
+        box-shadow: 0px 150px 53px 56px rgba(255, 255, 255, 1);
         z-index: -1;
     }
 
@@ -247,7 +253,28 @@ main {
     padding: 0 250px;
 
     p {
+        color: #7E00E5;
+        font-family: 'Monument - Regular';
+        text-align: center;
+        font-size: 24px;
+    }
+}
+
+.planos {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 100px 250px 50px;
+
+    p {
         color: #DED8DE;
+        font-family: 'Monument - Regular';
+        text-align: center;
+        font-size: 24px;
+    }
+
+    span {
+        color: #EA4DBF;
         font-family: 'Monument - Regular';
         text-align: center;
         font-size: 24px;
