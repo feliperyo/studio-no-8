@@ -237,6 +237,23 @@ main {
     }
 }
 
+.artistas {
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 250px;
+
+    p {
+        color: #DED8DE;
+        font-family: 'Monument - Regular';
+        text-align: center;
+        font-size: 24px;
+    }
+}
+
 .contato {
     width: 100vw;
     display: flex;
@@ -244,7 +261,7 @@ main {
     align-items: center;
     justify-content: center;
     gap: 65px;
-    padding: 100px 0;
+    padding: 0 0 100px;
 
     a {
         height: 10vh;
