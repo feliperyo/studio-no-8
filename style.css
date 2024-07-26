@@ -37,7 +37,7 @@ body {
 }
 
 .mascara {
-    height: 500vh;
+    height: 200vh;
     width: 100vw;
     background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
     position: fixed;
@@ -331,6 +331,8 @@ main {
     }
 
     iframe {
+        width: 650px;
+        height: 450px;
         border-radius: 30px;
         -webkit-border-radius: 30px;
         -moz-border-radius: 30px;
@@ -385,6 +387,7 @@ footer {
 @media screen and (max-width: 1030px) {
     .video-bg video {
         left: -82%;
+        overflow-x: hidden;
     }
 
     header {
@@ -535,6 +538,203 @@ footer {
     .artistas {
         padding: 50px;
         margin-top: 380px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .video-bg video {
+        top: -30px;
+        left: -159%;
+    }
+
+    header {
+        padding-right: 25px;
+
+        .nav-list {
+            width: 75vw;
+        }
+    }
+
+    main {
+        padding-bottom: 90px;
+
+        h1 {
+            font-size: 45px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 8px;
+        }
+    }
+
+    .sobre {
+        height: 80vh;
+        padding: 200px 10px;
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .estilos {
+        height: 45vh;
+        padding: 200px 10px;
+        gap: 30px;
+
+        h2 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .ballet {
+        width: 100vw;
+        padding: 300px 20px 0;
+        text-align: center;
+
+        img {
+            width: 100vw;
+            left: 0;
+            box-shadow: 0px 125px 53px 56px rgba(255, 255, 255, 1);
+        }
+
+        div {
+            margin-top: -200px;
+            text-shadow: 0px 3px 5px #000;
+            gap: 10px;
+        }
+
+        .p1 {
+            font-size: 20px;
+        }
+
+        .p2 {
+            font-size: 20px;
+        }
+
+        .p3 {
+            font-size: 20px;
+        }
+    }
+
+    .artistas {
+        margin-top: 100px;
+        padding: 0 20px;
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .planos {
+        gap: 25px;
+        padding: 100px 20px;
+    }
+
+    .contato {
+        padding: 100px 20px;
+
+        a {
+            height: 10vh;
+        }
+
+        button {
+            font-size: 20px;
+        }
+
+        button:hover {
+            font-size: 20px;
+        }
+
+        iframe {
+            width: 400px;
+            height: 50vh;
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+        }
+    }
+
+    footer {
+        padding: 25px 50px;
+
+        p {
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    main {
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+    .sobre {
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .estilos {
+        padding: 200px 10px 100px;
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .ballet {
+        padding: 350px 20px 0;
+    }
+
+    .artistas {
+        margin-top: 125px;
+    }
+
+    .planos {
+        padding: 100px 20px 0;
+
+        p,
+        span {
+            font-size: 20px;
+        }
+    }
+
+    .contato {
+
+        button {
+            font-size: 16px;
+        }
+
+        button:hover {
+            font-size: 16px;
+        }
+
+        iframe {
+            width: 340px;
+            height: 40vh;
+        }
+    }
+
+    footer {
+
+        p {
+            font-size: 8px;
+        }
     }
 }
 
