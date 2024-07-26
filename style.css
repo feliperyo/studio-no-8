@@ -108,6 +108,10 @@ header {
             position: relative;
         }
 
+        a:link {
+            color: #fff;
+        }
+
         a:visited {
             color: #fff;
         }
