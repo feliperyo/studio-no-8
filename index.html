@@ -33,15 +33,21 @@
     </div>
 
     <header>
-
         <a href="#home"><img src="./assets/logo-white.png" alt="logo"></a>
-        <nav>
-            <a href="#sobre">AULAS DE DANÇA</a>
-            <a href="#modalidades">MODALIDADES</a>
-            <a href="#ballet">ALUGUEL DE SALAS</a>
-            <a href="#planos">PLANOS</a>
-            <!-- <a href="#">DEPOIMENTOS</a> -->
-            <a href="#contato">CONTATO</a>
+
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+        <nav class="nav-list">
+            <a onclick="closeNav()" href="#sobre">AULAS DE DANÇA</a>
+            <a onclick="closeNav()" href="#modalidades">MODALIDADES</a>
+            <a onclick="closeNav()" href="#ballet">ALUGUEL DE SALAS</a>
+            <a onclick="closeNav()" href="#planos">PLANOS</a>
+            <!-- <a onclick="closeNav()" href="#">DEPOIMENTOS</a> -->
+            <a onclick="closeNav()" href="#contato">CONTATO</a>
         </nav>
 
     </header>
@@ -117,5 +123,6 @@
     </footer>
 
 </body>
+<script src="./mobile-navbar.js"></script>
 
 </html>
