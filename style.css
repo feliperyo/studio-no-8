@@ -388,6 +388,145 @@ footer {
     }
 }
 
+@media screen and (max-width: 1600px) {
+
+    header {
+        height: 60px;
+        gap: 30px;
+
+        img {
+            width: 100px;
+        }
+
+        .nav-list {
+            gap: 20px;
+
+            a {
+                font-size: 10px;
+            }
+        }
+    }
+
+    main {
+        padding-bottom: 50px;
+
+        h1 {
+            font-size: 100px;
+        }
+
+        h2 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .sobre {
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .estilos {
+
+        h2 {
+            font-size: 35px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .ballet {
+
+        img {
+            box-shadow: 0px 100px 53px 56px rgba(255, 255, 255, 1);
+        }
+
+        div {
+            margin-top: -90px;
+        }
+
+        .p1 {
+            font-size: 16px;
+        }
+
+        .p2 {
+            font-size: 28px;
+        }
+
+        .p3 {
+            font-size: 16px;
+        }
+    }
+
+    .artistas {
+
+        p {
+            font-size: 20px;
+        }
+    }
+
+    .planos {
+
+        p {
+            font-size: 20px;
+        }
+
+        span {
+            font-size: 20px;
+        }
+    }
+
+    .contato {
+
+        button {
+            font-size: 20px;
+        }
+
+        button:hover {
+            font-size: 24px;
+        }
+
+        iframe {
+            width: 500px;
+            height: 300px;
+        }
+    }
+
+    footer {
+        padding: 25px;
+        gap: 30px;
+
+        .share {
+            gap: 3px;
+        }
+
+        a {
+            width: 40px;
+            height: 40px;
+        }
+
+        img {
+            width: 35px;
+            height: 35px;
+        }
+
+        img:hover {
+            width: 40px;
+            height: 40px;
+        }
+
+        p {
+            font-size: 8px;
+        }
+    }
+}
+
 @media screen and (max-width: 1030px) {
     .video-bg video {
         left: -82%;
