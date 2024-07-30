@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     scroll-behavior: smooth;
+    font-family: 'Monument - Regular';
 }
 
 @font-face {
@@ -104,7 +105,7 @@ header {
         gap: 25px;
 
         a {
-            font-family: 'Monument - UltraBold';
+            font-family: 'Monument - Regular';
             position: relative;
         }
 
@@ -144,19 +145,16 @@ main {
     text-shadow: 0px 3px 5px #000;
 
     h1 {
-        font-family: 'Monument - UltraBold';
         font-size: 150px;
         color: #EA4DBF;
     }
 
     h2 {
         color: #DED8DE;
-        font-family: 'Monument - UltraBold';
         font-size: 75px;
     }
 
     p {
-        font-family: 'Monument - Regular';
         font-size: 30px;
         color: #DED8DE;
     }
@@ -183,12 +181,7 @@ main {
     }
 
     p {
-        font-family: 'Monument - Regular';
         font-size: 28px;
-
-        span {
-            font-family: 'Monument - UltraBold';
-        }
     }
 }
 
@@ -205,13 +198,11 @@ main {
 
     h2 {
         color: #EA4DBF;
-        font-family: 'Monument - UltraBold';
         font-size: 50px;
     }
 
     p {
         color: #DED8DE;
-        font-family: 'Monument - Regular';
         text-align: center;
         font-size: 26px;
     }
@@ -242,20 +233,17 @@ main {
 
     .p1 {
         color: #EA4DBF;
-        font-family: 'Monument - UltraBold';
         font-size: 20px;
     }
 
     .p2 {
         color: #DED8DE;
-        font-family: 'Monument - Regular';
         text-align: center;
         font-size: 36px;
     }
 
     .p3 {
         color: #EA4DBF;
-        font-family: 'Monument - UltraBold';
         font-size: 20px;
     }
 }
@@ -271,7 +259,6 @@ main {
 
     p {
         color: #7E00E5;
-        font-family: 'Monument - Regular';
         text-align: center;
         font-size: 24px;
     }
@@ -286,14 +273,12 @@ main {
 
     p {
         color: #DED8DE;
-        font-family: 'Monument - Regular';
         text-align: center;
         font-size: 24px;
     }
 
     span {
         color: #EA4DBF;
-        font-family: 'Monument - Regular';
         text-align: center;
         font-size: 24px;
     }
@@ -320,7 +305,6 @@ main {
         background-color: #EA4DBF;
         color: #000;
         font-size: 25px;
-        font-family: 'Monument - Regular';
         padding: 15px 30px;
         border-radius: 30px;
         -webkit-border-radius: 30px;
@@ -390,7 +374,6 @@ footer {
     }
 
     p {
-        font-family: 'Monument - Regular';
         font-size: 14px;
     }
 }
