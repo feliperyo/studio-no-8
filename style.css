@@ -54,6 +54,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 999;
 }
 
 .link-whats {
@@ -77,6 +78,7 @@ header {
     display: flex;
     align-items: center;
     gap: 50px;
+    z-index: 999;
 
     .mobile-menu {
         display: none;
@@ -212,23 +214,148 @@ main {
     }
 }
 
-.ballet {
-    width: 100vw;
-    padding-top: 100px;
+#ballet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
 
-    img {
-        width: 100vw;
-        box-shadow: 0px 150px 53px 56px rgba(255, 255, 255, 1);
-        z-index: -1;
+    .mySwiper {
+        width: 50%;
+        height: 500px;
+    }
+
+    swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    swiper-slide img {
+        height: auto;
+        width: 325px;
+        border-radius: 30px;
+    }
+
+    .autoplay-progress {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        z-index: 10;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: var(--swiper-theme-color);
+    }
+
+    .autoplay-progress svg {
+        --progress: 0;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        stroke-width: 4px;
+        stroke: var(--swiper-theme-color);
+        fill: none;
+        stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+        stroke-dasharray: 125.6;
+        transform: rotate(-90deg);
+    }
+}
+
+.salas {
+    width: 100vw;
+    height: auto;
+    padding: 100px 250px 0;
+    text-shadow: 0px 3px 5px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    h2 {
+        color: #EA4DBF;
+        font-size: 50px;
     }
 
     div {
         display: flex;
+        justify-content: space-around;
+
+        .container-sala {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            img {
+                width: 100%;
+                border-radius: 30px;
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                -ms-border-radius: 30px;
+                -o-border-radius: 30px;
+            }
+
+            .img-left {
+                border-radius: 30px 0 0 30px;
+                -webkit-border-radius: 30px 0 0 30px;
+                -moz-border-radius: 30px 0 0 30px;
+                -ms-border-radius: 30px 0 0 30px;
+                -o-border-radius: 30px 0 0 30px;
+            }
+
+            .img-right {
+                border-radius: 0 30px 30px 0;
+                -webkit-border-radius: 0 30px 30px 0;
+                -moz-border-radius: 0 30px 30px 0;
+                -ms-border-radius: 0 30px 30px 0;
+                -o-border-radius: 0 30px 30px 0;
+            }
+
+            p {
+                position: absolute;
+                color: #DED8DE;
+                bottom: 10px;
+            }
+
+            .p-lado {
+                bottom: 30px;
+            }
+        }
+    }
+}
+
+.artistas {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 240px 0;
+
+    .p {
+        color: #DED8DE;
+        text-align: center;
+        font-size: 24px;
+        padding-bottom: 50px;
+        text-shadow: 0px 3px 5px #000;
+    }
+
+    div {
+        width: 100vw;
+        display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        margin-top: -125px;
-        text-shadow: 0px 3px 5px #000;
+        padding: 35px 0;
+        background-color: #DED8DE;
     }
 
     .p1 {
@@ -237,7 +364,7 @@ main {
     }
 
     .p2 {
-        color: #DED8DE;
+        color: #000;
         text-align: center;
         font-size: 36px;
     }
@@ -248,28 +375,18 @@ main {
     }
 }
 
-.artistas {
-    width: 100vw;
-    height: 25vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 240px;
-
-    p {
-        color: #7E00E5;
-        text-align: center;
-        font-size: 24px;
-    }
-}
-
 .planos {
     display: flex;
     flex-direction: column;
     gap: 25px;
     padding: 100px 250px 50px;
     text-shadow: 0px 3px 5px #000;
+
+    h2 {
+        color: #DED8DE;
+        font-size: 34px;
+        text-align: center;
+    }
 
     p {
         color: #DED8DE;
@@ -431,14 +548,54 @@ footer {
         }
     }
 
-    .ballet {
+    #ballet {
 
-        img {
-            box-shadow: 0px 100px 53px 56px rgba(255, 255, 255, 1);
+        .mySwiper {
+            height: 375px;
+        }
+
+        swiper-slide img {
+            width: 250px;
+        }
+    }
+
+    .salas {
+
+        h2 {
+            font-size: 35px;
         }
 
         div {
-            margin-top: -90px;
+
+            .container-sala {
+
+                img {
+                    width: 100%;
+                }
+
+                .img-left {
+                    margin-right: -10px;
+                    z-index: -1;
+                }
+
+                .img-right {
+                    margin-left: -10px;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    .artistas {
+        padding: 75px 180px 0;
+
+        .p {
+            font-size: 18px;
+            padding-bottom: 50px;
+        }
+
+        div {
+            padding: 25px 0;
         }
 
         .p1 {
@@ -446,7 +603,7 @@ footer {
         }
 
         .p2 {
-            font-size: 28px;
+            font-size: 24px;
         }
 
         .p3 {
@@ -454,22 +611,18 @@ footer {
         }
     }
 
-    .artistas {
-        padding: 0 150px;
-
-        p {
-            font-size: 16px;
-        }
-    }
-
     .planos {
 
+        h2 {
+            font-size: 30px;
+        }
+
         p {
-            font-size: 20px;
+            font-size: 18px;
         }
 
         span {
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 
@@ -633,7 +786,7 @@ footer {
         gap: 30px;
 
         h2 {
-            font-size: 40px;
+            font-size: 50px;
         }
 
         p {
@@ -641,38 +794,85 @@ footer {
         }
     }
 
-    .ballet {
-        width: 100vw;
-        padding-top: 100px;
+    #ballet {
 
-        img {
-            width: 175vw;
-            position: absolute;
-            left: -38%;
-            box-shadow: 0px 125px 53px 56px rgba(255, 255, 255, 1);
+        .mySwiper {
+            width: 75%;
+            height: 525px;
+        }
+
+        swiper-slide img {
+            width: 350px;
+        }
+    }
+
+    .salas {
+        padding: 100px 50px 0;
+
+        h2 {
+            font-size: 50px;
+        }
+    }
+
+
+    .artistas {
+        padding: 100px 60px 0;
+
+        .p {
+            font-size: 24px;
+        }
+
+        .p1 {
+            font-size: 20px;
         }
 
         .p2 {
-            font-size: 30px;
+            font-size: 36px;
+        }
+
+        .p3 {
+            font-size: 20px;
         }
     }
 
-    .artistas {
-        padding: 50px;
-        margin-top: 465px;
-    }
-
     .planos {
+        display: flex;
+        flex-direction: column;
         gap: 25px;
-        padding: 100px 50px 50px;
+        padding: 100px 250px 50px;
+        text-shadow: 0px 3px 5px #000;
+
+        h2 {
+            color: #DED8DE;
+            font-size: 34px;
+            text-align: center;
+        }
+
+        p {
+            color: #DED8DE;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        span {
+            color: #EA4DBF;
+            text-align: center;
+            font-size: 24px;
+        }
     }
 }
 
 @media screen and (max-width: 999px) {
 
     .artistas {
-        padding: 50px;
-        margin-top: 380px;
+
+        .p2 {
+            font-size: 28px;
+        }
+    }
+
+    .planos {
+        padding: 100px 50px 50px;
     }
 }
 
@@ -702,7 +902,7 @@ footer {
         padding-bottom: 90px;
 
         h1 {
-            font-size: 45px;
+            font-size: 42px;
         }
 
         h2 {
@@ -737,41 +937,84 @@ footer {
         }
     }
 
-    .ballet {
-        width: 100vw;
-        padding: 300px 20px 0;
-        text-align: center;
+    #ballet {
 
-        img {
-            width: 100vw;
-            left: 0;
-            box-shadow: 0px 125px 53px 56px rgba(255, 255, 255, 1);
+        .mySwiper {
+            width: 100%;
+            height: 400px;
         }
 
-        div {
-            margin-top: -200px;
-            text-shadow: 0px 3px 5px #000;
-            gap: 10px;
-        }
-
-        .p1 {
-            font-size: 20px;
-        }
-
-        .p2 {
-            font-size: 20px;
-        }
-
-        .p3 {
-            font-size: 20px;
+        swiper-slide img {
+            width: 265px;
         }
     }
 
-    .artistas {
-        margin-top: 100px;
-        padding: 0 20px;
+    .salas {
+        padding: 100px 0px 0;
 
-        p {
+        h2 {
+            font-size: 28px;
+        }
+
+        div {
+            justify-content: center;
+            flex-direction: column;
+
+            .container-sala {
+
+                img {
+                    width: 100%;
+                    border-radius: 0px;
+                    -webkit-border-radius: 0px;
+                    -moz-border-radius: 0px;
+                    -ms-border-radius: 0px;
+                    -o-border-radius: 0px;
+                }
+
+                .img-left {
+                    border-radius: 0px;
+                    -webkit-border-radius: 0px;
+                    -moz-border-radius: 0px;
+                    -ms-border-radius: 0px;
+                    -o-border-radius: 0px;
+                    margin: 0;
+                }
+
+                .img-right {
+                    border-radius: 0px;
+                    -webkit-border-radius: 0px;
+                    -moz-border-radius: 0px;
+                    -ms-border-radius: 0px;
+                    -o-border-radius: 0px;
+                    margin: 0;
+                }
+
+                .p-lado {
+                    bottom: 10px;
+                }
+            }
+        }
+    }
+
+
+    .artistas {
+        padding: 100px 10px 0;
+
+        .p {
+            font-size: 18px;
+        }
+
+        .p1 {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .p2 {
+            font-size: 28px;
+            margin: 10px 0;
+        }
+
+        .p3 {
             font-size: 16px;
         }
     }
@@ -782,7 +1025,7 @@ footer {
     }
 
     .contato {
-        padding: 100px 20px;
+        padding: 0px 10px 100px;
 
         a {
             height: 10vh;
@@ -839,20 +1082,48 @@ footer {
         }
     }
 
-    .ballet {
-        padding: 350px 20px 0;
+    .salas {
+
+        h2 {
+            font-size: 24px;
+        }
     }
 
+
     .artistas {
-        margin-top: 125px;
+        padding: 100px 10px 0;
+
+        .p {
+            font-size: 16px;
+        }
+
+        .p1 {
+            font-size: 14px;
+        }
+
+        .p2 {
+            font-size: 26px;
+        }
+
+        .p3 {
+            font-size: 14px;
+        }
     }
 
     .planos {
-        padding: 100px 20px 0;
+        gap: 25px;
+        padding: 100px 10px 50px;
 
-        p,
+        h2 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
         span {
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 

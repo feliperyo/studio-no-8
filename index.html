@@ -16,6 +16,7 @@
     <meta property="og:site_name" content="Studio NO-8">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <title>Studio NO-8</title>
 </head>
@@ -45,7 +46,7 @@
             <a onclick="closeNav()" href="#home">HOME</a>
             <a onclick="closeNav()" href="#sobre">AULAS DE DANÇA</a>
             <a onclick="closeNav()" href="#modalidades">MODALIDADES</a>
-            <a onclick="closeNav()" href="#ballet">ALUGUEL DE SALAS</a>
+            <a onclick="closeNav()" href="#salas">LOCAÇÃO DE SALA</a>
             <a onclick="closeNav()" href="#planos">PLANOS</a>
             <!-- <a onclick="closeNav()" href="#">DEPOIMENTOS</a> -->
             <a onclick="closeNav()" href="#contato">CONTATO</a>
@@ -56,7 +57,7 @@
     <main id="home">
         <h1>STUDIO NO-8</h1>
         <h2>ENTROU, DANÇOU</h2>
-        <p>AULAS DE DANÇA / EVENTOS / ALUGUEL DE SALA / BEM-ESTAR</p>
+        <p>AULAS DE DANÇA / EVENTOS / LOCAÇÃO DE SALA / BEM-ESTAR</p>
     </main>
 
     <section id="sobre" class="sobre">
@@ -72,14 +73,60 @@
     </section>
 
     <section id="modalidades" class="estilos">
-        <h2>MODALIDADES:</h2>
+        <h2>MODALIDADES</h2>
         <p><span>JAZZ FUNK, HIP HOP ADULTO E KIDS, DANCEHALL, COREOGRAFIA, TWERK, FITDANCE, FORRÓ, ZOUK,</span> ENTRE
             OUTROS DIVERSOS
             WORKSHOPS COM GRANDES COREÓGRAFOS E ARTISTAS RENOMADOS NO MERCADO.</p>
     </section>
 
-    <section id="ballet" class="ballet">
-        <img src="./assets/mosaico.png" alt="mosaico ensaio">
+    <section id="ballet">
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
+            space-between="30" centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+            <swiper-slide><img src="./assets/ensaios/img1.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img2.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img3.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img4.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img5.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img6.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img7.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img8.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img9.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img10.webp" alt="pessoas dançando"></swiper-slide>
+
+            <div class="autoplay-progress" slot="container-end">
+                <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+            </div>
+        </swiper-container>
+    </section>
+
+    <section id="salas" class="salas">
+        <h2>LOCAÇÃO DE SALAS</h2>
+
+        <div>
+            <div class="container-sala">
+                <img class="img-left" src="./assets/salas/sala-7.webp" alt="sala de dança">
+                <p class="p-lado">Sala 7</p>
+            </div>
+            <div class="container-sala">
+                <img src="./assets/salas/sala-8.webp" alt="sala de dança">
+                <p>Sala 8</p>
+            </div>
+            <div class="container-sala">
+                <img class="img-right" src="./assets/salas/sala-backstage.webp" alt="sala de dança">
+                <p class="p-lado">Sala Backstage</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="artistas">
+        <p class="p">Mc Daniel, Dennis DJ, Pedro Sampaio, Glória Groove, Priscilla, Luisa Sonza, Luiza Possi, Thaíde, Mc
+            Ph, Mc
+            Ryan SP, Mc
+            Hariel, Mc Luanna, Tasha & Tracie e muito mais.</p>
+
         <div>
             <p class="p1">ONDE ENSAIARAM PARA GRANDES FESTIVAIS COMO:</p>
             <p class="p2">Lollapalooza, The Town, Rock In Rio,</p>
@@ -87,15 +134,9 @@
         </div>
     </section>
 
-    <section class="artistas">
-        <p>Mc Daniel, Dennis DJ, Pedro Sampaio, Glória Groove, Priscilla, Luisa Sonza, Luiza Possi, Thaíde, Mc Ph, Mc
-            Ryan SP, Mc
-            Hariel, Mc Luanna, Tasha & Tracie e muito mais.</p>
-    </section>
-
     <section id="planos" class="planos">
-        <p>Trabalhamos com planos de aulas.</p>
-        <span>O que isso significa?</span>
+        <h2>TRABALHAMOS COM PLANOS DE AULAS</h2>
+        <span>O QUE ISSO SIGNIFICA?</span>
         <p>Você pode realizar todas as modalidades da nossa grade até se identificar com as que você mais gostou. Todos
             os planos são válidos por 30 dias.</p>
         <p>Para mais informações, <span>clique no botão abaixo.</span></p>
@@ -125,5 +166,7 @@
 
 </body>
 <script src="./mobile-navbar.js"></script>
+<script src="./scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 </html>
