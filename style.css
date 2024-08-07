@@ -144,7 +144,7 @@ main {
     align-items: center;
     justify-content: flex-end;
     padding-bottom: 50px;
-    text-shadow: 0px 3px 5px #000;
+    /* text-shadow: 0px 3px 5px #000; */
 
     h1 {
         font-size: 150px;
@@ -196,7 +196,6 @@ main {
     align-items: center;
     padding: 100px 250px 0;
     gap: 30px;
-    text-shadow: 0px 3px 5px #000;
 
     h2 {
         color: #EA4DBF;
@@ -272,7 +271,6 @@ main {
     width: 100vw;
     height: auto;
     padding: 100px 250px 0;
-    text-shadow: 0px 3px 5px #000;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -345,7 +343,6 @@ main {
         text-align: center;
         font-size: 24px;
         padding-bottom: 50px;
-        text-shadow: 0px 3px 5px #000;
     }
 
     div {
@@ -380,7 +377,6 @@ main {
     flex-direction: column;
     gap: 25px;
     padding: 100px 250px 50px;
-    text-shadow: 0px 3px 5px #000;
 
     h2 {
         color: #DED8DE;
@@ -840,7 +836,6 @@ footer {
         flex-direction: column;
         gap: 25px;
         padding: 100px 250px 50px;
-        text-shadow: 0px 3px 5px #000;
 
         h2 {
             color: #DED8DE;
