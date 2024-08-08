@@ -214,57 +214,35 @@ main {
 }
 
 #ballet {
+    width: 100%;
+    height: 460px;
+    margin: 100px 0 0;
+    overflow-x: hidden;
+}
+
+.carrossel {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
+    position: relative;
+}
 
-    .mySwiper {
-        width: 50%;
-        height: 500px;
-    }
+.item {
+    height: 450px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    animation: autoRun 48s linear infinite;
+    -webkit-animation: autoRun 48s linear infinite;
+    animation-delay: var(--delay);
+}
 
-    swiper-slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    swiper-slide img {
-        height: auto;
-        width: 325px;
-        border-radius: 30px;
-    }
-
-    .autoplay-progress {
-        position: absolute;
-        right: 16px;
-        bottom: 16px;
-        z-index: 10;
-        width: 48px;
-        height: 48px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        color: var(--swiper-theme-color);
-    }
-
-    .autoplay-progress svg {
-        --progress: 0;
-        position: absolute;
-        left: 0;
-        top: 0px;
-        z-index: 10;
-        width: 100%;
-        height: 100%;
-        stroke-width: 4px;
-        stroke: var(--swiper-theme-color);
-        fill: none;
-        stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-        stroke-dasharray: 125.6;
-        transform: rotate(-90deg);
-    }
+.car-img {
+    height: 100%;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
 }
 
 .salas {
@@ -544,16 +522,7 @@ footer {
         }
     }
 
-    #ballet {
-
-        .mySwiper {
-            height: 375px;
-        }
-
-        swiper-slide img {
-            width: 250px;
-        }
-    }
+    #ballet {}
 
     .salas {
 
@@ -718,11 +687,11 @@ footer {
             -ms-transform: translate(100%);
             -o-transform: translate(100%);
 
-            transition: transform .3s ease-in;
-            -webkit-transition: transform .3s ease-in;
-            -moz-transition: transform .3s ease-in;
-            -ms-transition: transform .3s ease-in;
-            -o-transition: transform .3s ease-in;
+            transition: transform .3s ease-in-out;
+            -webkit-transition: transform .3s ease-in-out;
+            -moz-transition: transform .3s ease-in-out;
+            -ms-transition: transform .3s ease-in-out;
+            -o-transition: transform .3s ease-in-out;
 
             a {
                 margin: 30px 0;
@@ -791,15 +760,32 @@ footer {
     }
 
     #ballet {
+        margin: 50px 0 0;
+    }
 
-        .mySwiper {
-            width: 75%;
-            height: 525px;
-        }
+    .item {
+        animation: autoRun 52s linear infinite;
+        -webkit-animation: autoRun 52s linear infinite;
+    }
 
-        swiper-slide img {
-            width: 350px;
-        }
+    .item2 {
+        animation-delay: 13s;
+    }
+
+    .item3 {
+        display: none;
+    }
+
+    .item4 {
+        animation-delay: 26s;
+    }
+
+    .item5 {
+        animation-delay: 39s;
+    }
+
+    .item6 {
+        display: none;
     }
 
     .salas {
@@ -933,15 +919,24 @@ footer {
     }
 
     #ballet {
+        margin: 0;
+    }
 
-        .mySwiper {
-            width: 100%;
-            height: 400px;
-        }
+    .item {
+        animation: autoRun 60s linear infinite;
+        -webkit-animation: autoRun 60s linear infinite;
+    }
 
-        swiper-slide img {
-            width: 265px;
-        }
+    .item2 {
+        animation-delay: 21s;
+    }
+
+    .item4 {
+        display: none;
+    }
+
+    .item5 {
+        animation-delay: 41s;
     }
 
     .salas {
@@ -1077,6 +1072,23 @@ footer {
         }
     }
 
+    #ballet {
+        margin: 50px 0 0;
+    }
+
+    .item {
+        animation: autoRun 63s linear infinite;
+        -webkit-animation: autoRun 63s linear infinite;
+    }
+
+    .item2 {
+        animation-delay: 21s;
+    }
+
+    .item5 {
+        animation-delay: 42s;
+    }
+
     .salas {
 
         h2 {
@@ -1146,7 +1158,7 @@ footer {
     }
 }
 
-@keyframes navLinkFade {
+@keyframes navLink {
     from {
         transform: translate(50px);
         -webkit-transform: translate(50px);
@@ -1161,5 +1173,15 @@ footer {
         -moz-transform: translate(0);
         -ms-transform: translate(0);
         -o-transform: translate(0);
+    }
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -500px;
     }
 }

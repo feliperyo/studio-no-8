@@ -12,7 +12,7 @@ class MobileNavbar {
     this.navLinks.forEach((link) => {
       link.style.animation
         ? (link.style.animation = "")
-        : (link.style.animation = "navLinkFade .5s ease forwards .3s");
+        : (link.style.animation = "navLink .5s ease-in-out");
     });
   }
 
