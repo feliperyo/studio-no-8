@@ -866,7 +866,7 @@ footer {
 
     .video-bg video {
         top: -30px;
-        left: -159%;
+        left: -160%;
     }
 
     header {
@@ -921,8 +921,8 @@ footer {
     }
 
     .item {
-        animation: autoRun 60s linear infinite;
-        -webkit-animation: autoRun 60s linear infinite;
+        animation: autoRun 63s linear infinite;
+        -webkit-animation: autoRun 63s linear infinite;
     }
 
     .item2 {
@@ -934,7 +934,7 @@ footer {
     }
 
     .item5 {
-        animation-delay: 41s;
+        animation-delay: 42s;
     }
 
     .salas {
