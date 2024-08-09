@@ -105,6 +105,7 @@ header {
         a {
             font-family: 'Monument - Regular';
             position: relative;
+            color: #fff;
         }
 
         a:link {
