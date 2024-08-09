@@ -58,6 +58,7 @@ body {
 }
 
 .link-whats {
+    width: 60px;
     transition: .3s ease-in-out;
     -webkit-transition: .3s ease-in-out;
     -moz-transition: .3s ease-in-out;
