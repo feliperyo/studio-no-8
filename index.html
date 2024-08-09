@@ -15,6 +15,7 @@
         })(window, document, 'script', 'dataLayer', 'GTM-MS5LSP74');</script>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="shortcut icon" href="./public/favicon-32x32.png" type="image/png">
 
@@ -90,20 +91,26 @@
     </section>
 
     <section id="ballet">
-        <div class="carrossel">
-            <div class="item" style="--delay: 1s"><img class="car-img" src="./assets/ensaios/img1.webp"
-                    alt="pessoas dançando"></div>
-            <div class="item item2" style="--delay: 9s"><img class="car-img" src="./assets/ensaios/img2.webp"
-                    alt="pessoas dançando"></div>
-            <div class="item item3" style="--delay: 17s"><img class="car-img" src="./assets/ensaios/img3.webp"
-                    alt="pessoas dançando"></div>
-            <div class="item item4" style="--delay: 25s"><img class="car-img" src="./assets/ensaios/img4.webp"
-                    alt="pessoas dançando"></div>
-            <div class="item item5" style="--delay: 33s"><img class="car-img" src="./assets/ensaios/img5.webp"
-                    alt="pessoas dançando"></div>
-            <div class="item item6" style="--delay: 41s"><img class="car-img" src="./assets/ensaios/img6.webp"
-                    alt="pessoas dançando"></div>
-        </div>
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
+            space-between="30" centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+            <swiper-slide><img src="./assets/ensaios/img1.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img2.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img3.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img4.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img5.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img6.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img7.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img8.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img9.webp" alt="pessoas dançando"></swiper-slide>
+            <swiper-slide><img src="./assets/ensaios/img10.webp" alt="pessoas dançando"></swiper-slide>
+
+            <div class="autoplay-progress" slot="container-end">
+                <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+            </div>
+        </swiper-container>
     </section>
 
     <section id="salas" class="salas">
@@ -168,7 +175,9 @@
         <p>Copyright © 2024 Studio NO-8. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="./scripts.js"></script>
     <script src="./mobile-navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 
 </html>
