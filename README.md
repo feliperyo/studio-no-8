@@ -12,5 +12,5 @@
 <div align="center">
   <br>
   <p>Clique abaixo para acessar o Deploy:</p>
-<a href="https://studio-no-8.netlify.app/" target="_blank"><img src="https://img.shields.io/website-up-down-green-red/http/cv.lbesson.qc.to.svg"></a>
+<a href="https://studiono8.com.br/" target="_blank"><img src="https://img.shields.io/website-up-down-green-red/http/cv.lbesson.qc.to.svg"></a>
 </div>
