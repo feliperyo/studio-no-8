@@ -652,8 +652,7 @@ footer {
     }
 
     .video-bg-tablet video {
-        min-height: 100%;
-        min-width: 100%;
+        width: 1030px;
         position: fixed;
         top: 0;
     }
@@ -874,8 +873,7 @@ footer {
     }
 
     .video-bg-mobile video {
-        min-height: 100%;
-        min-width: 100%;
+        width: 450px;
         position: fixed;
         top: 0;
     }
