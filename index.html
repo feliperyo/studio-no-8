@@ -166,17 +166,30 @@
     </footer>
 
     <div class="video-bg">
-        <video src="./assets/bg/video-home.webm" alt="video de fundo" autoplay muted loop></video>
+        <video alt="video de fundo" autoplay muted loop controls>
+            <source src="./assets/bg/video-home.mov" type="video/mov">
+            <source src="./assets/bg/video-home.mp4" type="video/mp4">
+            <source src="./assets/bg/video-home.webm" type="video/webm">
+            <!-- Seu navegador não suporta tag de vídeo HTML5. -->
+        </video>
         <div class="mascara"></div>
     </div>
 
     <div class="video-bg-tablet">
-        <video src="./assets/bg/video-home-tablet.webm" alt="video de fundo" autoplay muted loop></video>
+        <video alt="video de fundo" autoplay muted loop width="1030" controls>
+            <source src="./assets/bg/video-home-tablet.mov" type="video/mov">
+            <source src="./assets/bg/video-home-tablet.mp4" type="video/mp4">
+            <source src="./assets/bg/video-home-tablet.webm" type="video/webm">
+        </video>
         <div class="mascara"></div>
     </div>
 
     <div class="video-bg-mobile">
-        <video src="./assets/bg/video-home-mobile.webm" alt="video de fundo" autoplay muted loop></video>
+        <video alt="video de fundo" autoplay muted loop width="450" controls>
+            <source src="./assets/bg/video-home-mobile.mov" type="video/mov">
+            <source src="./assets/bg/video-home-mobile.mp4" type="video/mp4">
+            <source src="./assets/bg/video-home-mobile.webm" type="video/webm">
+        </video>
         <div class="mascara"></div>
     </div>
 
