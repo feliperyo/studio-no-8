@@ -872,7 +872,7 @@ footer {
         z-index: -9;
     }
 
-    .video-bg-mobile img {
+    .video-bg-mobile video {
         min-height: 100%;
         min-width: 100%;
         position: fixed;
