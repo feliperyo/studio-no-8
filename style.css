@@ -902,7 +902,7 @@ footer {
     }
 
     .video-bg-mobile video {
-        width: 450px;
+        width: 100vw;
         position: fixed;
         top: 0;
     }
