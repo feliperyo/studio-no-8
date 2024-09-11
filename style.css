@@ -880,6 +880,24 @@ footer {
     }
 }
 
+@media screen and (max-width: 680px) {
+
+    main {
+
+        h1 {
+            font-size: 50px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+}
+
 @media screen and (max-width: 450px) {
 
     .whatsapp {
@@ -1169,6 +1187,25 @@ footer {
 
         p {
             font-size: 8px;
+        }
+    }
+}
+
+@media screen and (max-width: 340px) {
+
+    main {
+
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 12px;
+            text-align: center;
         }
     }
 }
