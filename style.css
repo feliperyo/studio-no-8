@@ -29,13 +29,11 @@ body {
     top: 0;
     left: 0;
     z-index: -9;
+    object-fit: cover;
 }
 
 .video-bg video {
-    min-height: 100%;
-    min-width: 100%;
-    position: fixed;
-    top: 0;
+    object-fit: cover;
 }
 
 .video-bg-tablet,
@@ -629,23 +627,6 @@ footer {
 
 @media screen and (max-width: 1030px) {
 
-    .video-bg {
-        display: none;
-    }
-
-    .video-bg-tablet {
-        display: block;
-        position: fixed;
-        top: 0;
-        z-index: -9;
-    }
-
-    .video-bg-tablet video {
-        width: 1030px;
-        position: fixed;
-        top: 0;
-    }
-
     header {
         justify-content: space-between;
         padding-right: 50px;
@@ -905,25 +886,6 @@ footer {
         bottom: 5px;
         width: 60px;
         height: 60px;
-    }
-
-    .video-bg-tablet {
-        display: none;
-    }
-
-    .video-bg-mobile {
-        display: block;
-        position: fixed;
-        top: 0;
-        z-index: -9;
-        align-content: center;
-    }
-
-    .video-bg-mobile video {
-        height: 100vh;
-        width: auto;
-        position: fixed;
-        top: 0;
     }
 
     header {
