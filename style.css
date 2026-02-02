@@ -10,11 +10,13 @@
 @font-face {
     font-family: 'Monument - Regular';
     src: url('./public/fonts/MonumentExtended-Regular.otf') format('opentype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Monument - UltraBold';
     src: url('./public/fonts/MonumentExtended-Ultrabold.otf') format('opentype');
+    font-display: swap;
 }
 
 body {
@@ -28,25 +30,25 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     z-index: -9;
-    object-fit: cover;
+    overflow: hidden;
 }
 
 .video-bg video {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.video-bg-tablet,
-.video-bg-mobile {
-    display: none;
-}
-
 .mascara {
-    height: 200vh;
-    width: 100vw;
-    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.95) 15%, rgba(10, 12, 16, 0.65) 50%, rgba(10, 12, 16, 0.95) 85%);
     position: fixed;
     top: 0;
+    left: 0;
 }
 
 .whatsapp {
@@ -63,15 +65,11 @@ body {
 
 .link-whats {
     width: 60px;
-    transition: .3s ease-in-out;
-    -webkit-transition: .3s ease-in-out;
-    -moz-transition: .3s ease-in-out;
-    -ms-transition: .3s ease-in-out;
-    -o-transition: .3s ease-in-out;
+    transition: transform .3s ease-in-out;
 }
 
 .link-whats:hover {
-    width: 70px;
+    transform: scale(1.15);
 }
 
 header {
@@ -95,10 +93,6 @@ header {
         background: #fff;
         margin: 8px;
         transition: .3s;
-        -webkit-transition: .3s;
-        -moz-transition: .3s;
-        -ms-transition: .3s;
-        -o-transition: .3s;
     }
 
     .nav-list {
@@ -112,10 +106,7 @@ header {
             color: #fff;
         }
 
-        a:link {
-            color: #fff;
-        }
-
+        a:link,
         a:visited {
             color: #fff;
         }
@@ -126,9 +117,9 @@ header {
             position: absolute;
             height: 2px;
             left: 0;
-            bottom: 0px;
+            bottom: 0;
             width: 0%;
-            transition: 0.3s;
+            transition: width 0.3s;
         }
 
         a:hover::after {
@@ -145,7 +136,6 @@ main {
     align-items: center;
     justify-content: flex-end;
     padding-bottom: 50px;
-    /* text-shadow: 0px 3px 5px #000; */
 
     h1 {
         font-size: 150px;
@@ -238,10 +228,6 @@ swiper-slide {
 swiper-slide img {
     height: 100%;
     border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
 }
 
 .salas {
@@ -271,28 +257,16 @@ swiper-slide img {
             img {
                 width: 100%;
                 border-radius: 30px;
-                -webkit-border-radius: 30px;
-                -moz-border-radius: 30px;
-                -ms-border-radius: 30px;
-                -o-border-radius: 30px;
             }
 
             .img-left {
                 margin-right: -10px;
                 border-radius: 30px 0 0 30px;
-                -webkit-border-radius: 30px 0 0 30px;
-                -moz-border-radius: 30px 0 0 30px;
-                -ms-border-radius: 30px 0 0 30px;
-                -o-border-radius: 30px 0 0 30px;
             }
 
             .img-right {
                 margin-left: -10px;
                 border-radius: 0 30px 30px 0;
-                -webkit-border-radius: 0 30px 30px 0;
-                -moz-border-radius: 0 30px 30px 0;
-                -ms-border-radius: 0 30px 30px 0;
-                -o-border-radius: 0 30px 30px 0;
                 z-index: -1;
             }
 
@@ -400,20 +374,12 @@ swiper-slide img {
         font-size: 25px;
         padding: 15px 30px;
         border-radius: 30px;
-        -webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        -ms-border-radius: 30px;
-        -o-border-radius: 30px;
         cursor: pointer;
-        transition: .3s ease-in-out;
-        -webkit-transition: .3s ease-in-out;
-        -moz-transition: .3s ease-in-out;
-        -ms-transition: .3s ease-in-out;
-        -o-transition: .3s ease-in-out;
+        transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
     }
 
     button:hover {
-        font-size: 30px;
+        transform: scale(1.1);
         color: #DED8DE;
         box-shadow: 0px 10px 24px 3px rgba(222, 216, 222, 1);
     }
@@ -422,10 +388,6 @@ swiper-slide img {
         width: 650px;
         height: 450px;
         border-radius: 30px;
-        -webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        -ms-border-radius: 30px;
-        -o-border-radius: 30px;
     }
 }
 
@@ -455,16 +417,11 @@ footer {
     }
 
     img {
-        transition: .3s ease-in-out;
-        -webkit-transition: .3s ease-in-out;
-        -moz-transition: .3s ease-in-out;
-        -ms-transition: .3s ease-in-out;
-        -o-transition: .3s ease-in-out;
+        transition: transform .3s ease-in-out;
     }
 
     img:hover {
-        width: 50px;
-        height: 50px;
+        transform: scale(1.1);
     }
 
     p {
@@ -476,11 +433,7 @@ footer {
     width: 100%;
     color: #000;
     text-decoration: none;
-    transition: .3s;
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -ms-transition: .3s;
-    -o-transition: .3s;
+    transition: color .3s;
 }
 
 .link-ryart:hover {
@@ -488,8 +441,8 @@ footer {
     color: #fff;
 }
 
+/* Media Queries */
 @media screen and (max-width: 1600px) {
-
     header {
         height: 60px;
         gap: 30px;
@@ -523,15 +476,11 @@ footer {
         }
     }
 
-    .sobre {
-
-        p {
-            font-size: 18px;
-        }
+    .sobre p {
+        font-size: 18px;
     }
 
     .estilos {
-
         h2 {
             font-size: 35px;
         }
@@ -542,28 +491,23 @@ footer {
     }
 
     .salas {
-
         h2 {
             font-size: 35px;
         }
 
-        div {
+        div .container-sala {
+            img {
+                width: 100%;
+            }
 
-            .container-sala {
+            .img-left {
+                margin-right: -10px;
+                z-index: -1;
+            }
 
-                img {
-                    width: 100%;
-                }
-
-                .img-left {
-                    margin-right: -10px;
-                    z-index: -1;
-                }
-
-                .img-right {
-                    margin-left: -10px;
-                    z-index: -1;
-                }
+            .img-right {
+                margin-left: -10px;
+                z-index: -1;
             }
         }
     }
@@ -594,7 +538,6 @@ footer {
     }
 
     .planos {
-
         h2 {
             font-size: 30px;
         }
@@ -609,13 +552,8 @@ footer {
     }
 
     .contato {
-
         button {
             font-size: 20px;
-        }
-
-        button:hover {
-            font-size: 24px;
         }
 
         iframe {
@@ -626,7 +564,6 @@ footer {
 }
 
 @media screen and (max-width: 1030px) {
-
     header {
         justify-content: space-between;
         padding-right: 50px;
@@ -637,10 +574,6 @@ footer {
 
         .mobile-menu.active .line1 {
             transform: rotate(-45deg) translate(-8px, 8px);
-            -webkit-transform: rotate(-45deg) translate(-8px, 8px);
-            -moz-transform: rotate(-45deg) translate(-8px, 8px);
-            -ms-transform: rotate(-45deg) translate(-8px, 8px);
-            -o-transform: rotate(-45deg) translate(-8px, 8px);
         }
 
         .mobile-menu.active .line2 {
@@ -649,10 +582,6 @@ footer {
 
         .mobile-menu.active .line3 {
             transform: rotate(45deg) translate(-5px, -7px);
-            -webkit-transform: rotate(45deg) translate(-5px, -7px);
-            -moz-transform: rotate(45deg) translate(-5px, -7px);
-            -ms-transform: rotate(45deg) translate(-5px, -7px);
-            -o-transform: rotate(45deg) translate(-5px, -7px);
         }
 
         .nav-list {
@@ -665,18 +594,8 @@ footer {
             flex-direction: column;
             align-items: flex-end;
             padding-right: 30px;
-
-            transform: translate(100%);
-            -webkit-transform: translate(100%);
-            -moz-transform: translate(100%);
-            -ms-transform: translate(100%);
-            -o-transform: translate(100%);
-
+            transform: translateX(100%);
             transition: transform .3s ease-in-out;
-            -webkit-transition: transform .3s ease-in-out;
-            -moz-transition: transform .3s ease-in-out;
-            -ms-transition: transform .3s ease-in-out;
-            -o-transition: transform .3s ease-in-out;
 
             a {
                 margin: 30px 0;
@@ -686,11 +605,7 @@ footer {
         }
 
         .nav-list.active {
-            transform: translate(0);
-            -webkit-transform: translate(0);
-            -moz-transform: translate(0);
-            -ms-transform: translate(0);
-            -o-transform: translate(0);
+            transform: translateX(0);
         }
     }
 
@@ -760,7 +675,6 @@ footer {
         }
     }
 
-
     .artistas {
         padding: 100px 60px 0;
 
@@ -820,25 +734,11 @@ footer {
         a {
             width: 55px;
             height: 55px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
         }
 
         img {
             width: 55px;
             height: 55px;
-            transition: .3s ease-in-out;
-            -webkit-transition: .3s ease-in-out;
-            -moz-transition: .3s ease-in-out;
-            -ms-transition: .3s ease-in-out;
-            -o-transition: .3s ease-in-out;
-        }
-
-        img:hover {
-            width: 60px;
-            height: 60px;
         }
 
         p {
@@ -848,12 +748,8 @@ footer {
 }
 
 @media screen and (max-width: 999px) {
-
-    .artistas {
-
-        .p2 {
-            font-size: 28px;
-        }
+    .artistas .p2 {
+        font-size: 28px;
     }
 
     .planos {
@@ -862,9 +758,7 @@ footer {
 }
 
 @media screen and (max-width: 680px) {
-
     main {
-
         h1 {
             font-size: 50px;
         }
@@ -880,7 +774,6 @@ footer {
 }
 
 @media screen and (max-width: 450px) {
-
     .whatsapp {
         right: 5px;
         bottom: 5px;
@@ -944,7 +837,7 @@ footer {
     }
 
     .salas {
-        padding: 100px 0px 0;
+        padding: 100px 0 0;
 
         h2 {
             font-size: 28px;
@@ -955,31 +848,14 @@ footer {
             flex-direction: column;
 
             .container-sala {
-
                 img {
                     width: 100%;
-                    border-radius: 0px;
-                    -webkit-border-radius: 0px;
-                    -moz-border-radius: 0px;
-                    -ms-border-radius: 0px;
-                    -o-border-radius: 0px;
+                    border-radius: 0;
                 }
 
-                .img-left {
-                    border-radius: 0px;
-                    -webkit-border-radius: 0px;
-                    -moz-border-radius: 0px;
-                    -ms-border-radius: 0px;
-                    -o-border-radius: 0px;
-                    margin: 0;
-                }
-
+                .img-left,
                 .img-right {
-                    border-radius: 0px;
-                    -webkit-border-radius: 0px;
-                    -moz-border-radius: 0px;
-                    -ms-border-radius: 0px;
-                    -o-border-radius: 0px;
+                    border-radius: 0;
                     margin: 0;
                 }
 
@@ -989,7 +865,6 @@ footer {
             }
         }
     }
-
 
     .artistas {
         padding: 100px 10px 0;
@@ -1019,7 +894,7 @@ footer {
     }
 
     .contato {
-        padding: 0px 10px 100px;
+        padding: 0 10px 100px;
 
         a {
             height: 10vh;
@@ -1029,18 +904,10 @@ footer {
             font-size: 16px;
         }
 
-        button:hover {
-            font-size: 16px;
-        }
-
         iframe {
             width: 360px;
             height: 50vh;
             border-radius: 30px;
-            -webkit-border-radius: 30px;
-            -moz-border-radius: 30px;
-            -ms-border-radius: 30px;
-            -o-border-radius: 30px;
         }
     }
 
@@ -1055,17 +922,12 @@ footer {
 }
 
 @media screen and (max-width: 380px) {
-
-    main {
-        h1 {
-            font-size: 36px;
-        }
+    main h1 {
+        font-size: 36px;
     }
 
-    .sobre {
-        p {
-            font-size: 16px;
-        }
+    .sobre p {
+        font-size: 16px;
     }
 
     .estilos {
@@ -1084,13 +946,9 @@ footer {
         width: 100%;
     }
 
-    .salas {
-
-        h2 {
-            font-size: 24px;
-        }
+    .salas h2 {
+        font-size: 24px;
     }
-
 
     .artistas {
         padding: 100px 10px 0;
@@ -1130,12 +988,7 @@ footer {
     }
 
     .contato {
-
         button {
-            font-size: 16px;
-        }
-
-        button:hover {
             font-size: 16px;
         }
 
@@ -1145,18 +998,13 @@ footer {
         }
     }
 
-    footer {
-
-        p {
-            font-size: 8px;
-        }
+    footer p {
+        font-size: 8px;
     }
 }
 
 @media screen and (max-width: 340px) {
-
     main {
-
         h1 {
             font-size: 20px;
         }
@@ -1173,9 +1021,7 @@ footer {
 }
 
 @media screen and (max-width: 250px) {
-
     main {
-
         h1 {
             font-size: 12px;
         }
@@ -1192,18 +1038,9 @@ footer {
 
 @keyframes navLink {
     from {
-        transform: translate(50px);
-        -webkit-transform: translate(50px);
-        -moz-transform: translate(50px);
-        -ms-transform: translate(50px);
-        -o-transform: translate(50px);
+        transform: translateX(50px);
     }
-
     to {
-        transform: translate(0);
-        -webkit-transform: translate(0);
-        -moz-transform: translate(0);
-        -ms-transform: translate(0);
-        -o-transform: translate(0);
+        transform: translateX(0);
     }
 }

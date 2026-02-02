@@ -1,50 +1,33 @@
-class MobileNavbar {
-  constructor(mobileMenu, navList, navLinks) {
-    this.mobileMenu = document.querySelector(mobileMenu);
-    this.navList = document.querySelector(navList);
-    this.navLinks = document.querySelectorAll(navLinks);
-    this.activeClass = "active";
+(function() {
+    'use strict';
 
-    this.handleClick = this.handleClick.bind(this);
-  }
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const navList = document.querySelector('.nav-list');
+    const navLinks = document.querySelectorAll('.nav-list a');
 
-  animatedLinks() {
-    this.navLinks.forEach((link) => {
-      link.style.animation
-        ? (link.style.animation = "")
-        : (link.style.animation = "navLink .5s ease-in-out");
-    });
-  }
+    if (!mobileMenu || !navList) return;
 
-  handleClick() {
-    this.navList.classList.toggle(this.activeClass);
-    this.mobileMenu.classList.toggle(this.activeClass);
-    this.animatedLinks();
-  }
+    function toggleMenu() {
+        navList.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
 
-  addClickEvent() {
-    this.mobileMenu.addEventListener("click", this.handleClick);
-  }
-
-  init() {
-    if (this.mobileMenu) {
-      this.addClickEvent();
+        navLinks.forEach(function(link) {
+            link.style.animation = link.style.animation
+                ? ''
+                : 'navLink .5s ease-in-out';
+        });
     }
-    return this;
-  }
-}
 
-const mobileNavbar = new MobileNavbar(
-  ".mobile-menu",
-  ".nav-list",
-  ".nav-list a"
-);
-mobileNavbar.init();
+    function closeMenu() {
+        navList.classList.remove('active');
+        mobileMenu.classList.remove('active');
+    }
 
-const nav = document.querySelector(".nav-list");
-const menu = document.querySelector(".mobile-menu");
+    mobileMenu.addEventListener('click', toggleMenu);
 
-function closeNav() {
-  nav.classList.remove("active");
-  menu.classList.remove("active");
-}
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+    });
+
+    window.closeNav = closeMenu;
+})();
