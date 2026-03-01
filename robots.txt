@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://studiono8.com.br/sitemap.xml
